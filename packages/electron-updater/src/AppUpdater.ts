@@ -322,9 +322,12 @@ export abstract class AppUpdater extends EventEmitter {
       return isLatestVersionNewer
     }
 
-    const currentVersionPrereleaseComponent = getVersionPreleaseComponents(currentVersion)
-    const latestVersionPrereleaseComponent = getVersionPreleaseComponents(latestVersion)
-    if (currentVersionPrereleaseComponent === latestVersionPrereleaseComponent) {
+    const currentVersionPrereleaseComponent = getVersionPreleaseComponents(currentVersion) || []
+    const currentChannel = currentVersionPrereleaseComponent[0]
+    const latestVersionPrereleaseComponent = getVersionPreleaseComponents(latestVersion) || []
+    const latestChannel = latestVersionPrereleaseComponent[0]
+
+    if (currentChannel === latestChannel) {
       // allowDowngrade taken in account only if channel differs
       return isLatestVersionNewer
     }
