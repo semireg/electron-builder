@@ -52,7 +52,7 @@
     "@electron/notarize": "2.5.0",
     "@electron/osx-sign": "1.3.3",
     "@electron/rebuild": "3.7.2",
-    "@electron/universal": "2.0.3",
+    "@electron/universal": "github:semireg/universal#581a12f3da67255e8b0f9a36b4e08e1f6a0b613a",
     "@malept/flatpak-bundler": "^0.4.0",
     "@types/fs-extra": "9.0.13",
     "async-exit-hook": "^2.0.1",
